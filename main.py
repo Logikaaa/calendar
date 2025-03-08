@@ -17,24 +17,15 @@ class Widget(QMainWindow):
         self.get_date()
 
     def configure(self):
-        self.ui.start.clicked.connect(self.media_play)
-        self.ui.stop.clicked.connect(self.media_stop)
-        self.ui.calendar.selectionChanged.connect(self.get_date)
+        
 
     def get_date(self):
-        self.media_stop()
-        print(self.ui.calendar.selectedDate())
-        day = str(self.ui.calendar.selectedDate().day())
-
-        self.media.setMedia(QMediaContent(QUrl.fromLocalFile(f'Video\\{day}.avi')))
-        if self.ui.autostart.isChecked():
-            self.media_play()
-
+       
     def media_play(self):
-        self.media.play()
+        
 
     def media_stop(self):
-        self.media.stop()
+        
 
 
 if __name__ == '__main__':
