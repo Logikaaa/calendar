@@ -11,10 +11,7 @@ class Widget(QMainWindow):
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.configure()
-        self.media = QMediaPlayer(self)
-        self.media.setVideoOutput(self.ui.video)
-        self.get_date()
+        
 
     def configure(self):
         
